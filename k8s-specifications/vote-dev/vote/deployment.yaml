@@ -22,5 +22,5 @@ spec:
         - containerPort: 80
           name: vote
         env:
-        - name: REDIS_HOST
+        - name: redis
           value: redis.redis.svc.cluster.local

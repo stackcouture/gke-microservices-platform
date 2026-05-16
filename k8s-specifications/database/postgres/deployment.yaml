@@ -27,7 +27,7 @@ spec:
         - containerPort: 5432
           name: postgres
         env:
-        - name: POSTGRES_HOST
+        - name: db
           value: db.postgres.svc.cluster.local
         volumeMounts:
         - mountPath: /var/lib/postgresql/data
