@@ -21,6 +21,3 @@ spec:
         ports:
         - containerPort: 80
           name: result
-        env:
-        - name: db
-          value: db.postgres.svc.cluster.local
