@@ -17,3 +17,9 @@ spec:
       containers:
       - image: dockersamples/examplevotingapp_worker
         name: worker
+      env:
+      - name: REDIS_HOST
+        value: redis.redis.svc.cluster.local
+
+      - name: POSTGRES_HOST
+        value: db.postgres.svc.cluster.local
