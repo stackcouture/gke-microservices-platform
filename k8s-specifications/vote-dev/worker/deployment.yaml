@@ -16,5 +16,5 @@ spec:
         app: worker
     spec:
       containers:
-      - image: dockersamples/examplevotingapp_worker
+      - image: asia-south1-docker.pkg.dev/project-18ee516c-a108-431d-a73/vote-docker-repo/worker:v1
         name: worker
