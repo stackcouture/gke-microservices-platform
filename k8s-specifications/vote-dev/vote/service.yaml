@@ -9,7 +9,7 @@ spec:
   # type: LoadBalancer
   type: ClusterIP
   ports:
-  - name: "vote-service"
+  - name: http
     port: 8080
     targetPort: 80
   selector:
