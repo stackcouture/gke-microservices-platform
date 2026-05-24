@@ -8,13 +8,13 @@ metadata:
   namespace: vote
 
 spec:
-  replicas: 1
+  replicas: 2
   revisionHistoryLimit: 5
 
   strategy:
     type: RollingUpdate
     rollingUpdate:
-      maxUnavailable: 1
+      maxUnavailable: 0
       maxSurge: 1
 
   selector:
@@ -33,6 +33,7 @@ spec:
 
     spec:
       serviceAccountName: vote-sa
+      automountServiceAccountToken: false
       terminationGracePeriodSeconds: 30
 
       affinity:
@@ -62,6 +63,9 @@ spec:
         runAsNonRoot: true
         runAsUser: 10001
         fsGroup: 2000
+
+        seccompProfile:
+          type: RuntimeDefault
 
       containers:
         - name: vote
